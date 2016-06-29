@@ -1,0 +1,44 @@
+{
+  "license": "proprietary",
+  "description": "Empty project with prepared simple layout, based on the The Modern CMS",
+  "keywords": ["cms"],
+  "homepage": "http://devp.eu/",
+  "authors": [
+    {
+      "name": "Vadims Petrusevs",
+      "email": "info@devp.eu",
+      "homepage": "http://devp.eu",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-0": {
+      "neTpyceB\\Tests": "tests"
+    }
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@bitbucket.org:sia-devp/tmcms.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:neTpyceB/tmcms-core.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:neTpyceB/tmcms-panel.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@bitbucket.org:sia-devp/tmcms-admin.git"
+    }
+  ],
+  "require": {
+    "php": ">=5.5",
+    "neTpyceB/TMCms": "dev-master",
+    "neTpyceB/TMCms-core": "dev-master",
+    "neTpyceB/TMCms-panel": "dev-master",
+    "neTpyceB/TMCms-admin": "dev-master"
+  }
+}
