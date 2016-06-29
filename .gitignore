@@ -1,0 +1,13 @@
+.git/
+cache/
+configs/*
+!configs/prod.php
+project/logs/
+temp/
+vendor/
+vendor/**/.git
+.idea
+composer.lock
+robots.txt
+sitemap.gz
+sitemap.xml
