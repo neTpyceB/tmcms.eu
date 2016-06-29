@@ -1,0 +1,114 @@
+// Core
+@import "core/_variables";
+@import "core/_mixins";
+@import "core/_base";
+
+// Its here because of mobile first
+@import "modules/responsive";
+
+header {
+  padding:10px 0;
+  
+  h1 {
+    small {
+      color: #fff;
+    }
+  }
+
+  input {
+    margin-top:15px;
+    display: block;
+  }
+
+}
+
+main {
+  padding-top:40px;
+  padding-bottom:$footer_height;
+}
+
+aside {
+  h3 {
+    font-weight:700;
+    margin-top:40px;
+
+    &:first-child {
+      margin-top:0;
+    }
+  }
+
+  ul {
+    li {
+      list-style-type: none;
+      a {
+        display: block;
+        padding:10px;
+        margin:5px 0;
+        background-color: #fff;
+
+        &:hover {
+          background-color: $blue;
+          text-decoration: none;
+        }
+
+      }
+    }
+  }
+}
+
+.content {
+  ul {
+    li {
+      list-style-type: none;
+
+      a {
+        color: $blue;
+        padding:3px 0;
+        display: block;
+
+        &:hover {
+          color: $blue;
+          text-decoration: underline;
+        }
+
+        i {
+          display: inline-block;
+          margin-right:5px;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  position: relative;
+  ul {
+    li {
+      list-style-type: none;
+
+      a {
+        color: #fff;
+        display: block;
+        padding:3px 0;
+        font-size:15px;
+
+        i {
+          display: inline-block;
+          margin-right:5px;
+        }
+      }
+    }
+  }
+  .bottom {
+    background-color: $dark_gray;
+    position: absolute;
+    width:100%;
+    bottom:0;
+
+    p {
+      margin:0;
+      padding:20px;
+    }
+
+  }
+}
