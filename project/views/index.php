@@ -25,7 +25,7 @@ class IndexView extends View
                                 <?= w('something_wrong'); ?>
                             </div>
                             <div class="js-put-wiki-content">
-                                Welcome
+                                <?= ($this->wiki_text ? $this->wiki_text : 'Welcome'); ?>
                             </div>
                         </div>
                     </div>

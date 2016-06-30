@@ -3,7 +3,9 @@
 namespace TMCms\Modules\Wiki;
 
 use TMCms\Modules\IModule;
+use TMCms\Modules\Wiki\Entity\WikiCategoryEntity;
 use TMCms\Modules\Wiki\Entity\WikiCategoryEntityRepository;
+use TMCms\Modules\Wiki\Entity\WikiEntity;
 use TMCms\Modules\Wiki\Entity\WikiEntityRepository;
 use TMCms\Traits\singletonInstanceTrait;
 
@@ -16,13 +18,20 @@ class ModuleWiki implements IModule
         return WikiCategoryEntityRepository::getInstance()->getPairs('title');
     }
 
-    public static function getSideCategories() {
+    public static function getSideCategories($wiki_id) {
 
         // Get categories
         $categories = new WikiCategoryEntityRepository();
         $categories->setWhereActive(true);
         $categories->addOrderByField();
         $all_categories = $categories->getAsArrayOfObjects();
+
+        $selected_wiki = new WikiEntity($wiki_id);
+        $selected_category = null;
+        if ($selected_wiki->getActive()) {
+            $category = new WikiCategoryEntity($selected_wiki->getCategoryId());
+            $selected_category = $category->getId();
+        }
 
         ob_start();
         ?>
@@ -36,12 +45,12 @@ class ModuleWiki implements IModule
                 $wiki->addOrderByField();
                 $all_wiki = $wiki->getAsArrayOfObjects();
                 if (count($all_wiki)): ?>
-                    <li class="js-expand-child <?= (!$key ? 'expanded' : ''); ?>">
+                    <li class="js-expand-child <?= ((!$key && !$selected_category) || $selected_category == $category->getId() ? 'expanded' : ''); ?>">
                         <a href="#"><?= $category->getTitle(); ?></a>
                         <ul>
                             <?php foreach ($all_wiki as $k => $wiki): $k++; ?>
                                 <li>
-                                    <a class="js-get-wiki-content" href="?wiki=<?= $wiki->getId(); ?>">
+                                    <a class="js-get-wiki-content <?= ($wiki_id == $wiki->getId() ? 'active' : ''); ?>" href="?wiki=<?= $wiki->getId(); ?>">
                                         <?= $k . '. ' . $wiki->getTitle(); ?>
                                     </a>
                                 </li>

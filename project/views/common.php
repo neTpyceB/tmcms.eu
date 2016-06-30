@@ -10,6 +10,14 @@ class CommonView extends View
 {
     public function header() {
         ?>
+
+        <noscript>
+            <style type="text/css">
+                aside ul li ul {
+                    display: block;
+                }
+            </style>
+        </noscript>
         <header>
             <div class="container">
                 <div class="row">
