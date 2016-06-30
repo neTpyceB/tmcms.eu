@@ -20,14 +20,14 @@ body {
 }
 
 header {
-  background-color: $blue;
+  background-color: $cmsBlue;
   color: #fff;
 }
 
 footer {
   margin: -$footer_height auto 0;
   min-height: $footer_height;
-  background-color: $blue;
+  background-color: $cmsBlue;
   color: #fff;
   padding-bottom: $footer_bottom_height;
 }
