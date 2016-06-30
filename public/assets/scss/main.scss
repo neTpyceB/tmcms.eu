@@ -6,6 +6,10 @@
 // Its here because of mobile first
 @import "modules/responsive";
 
+.error-message {
+  display: none;
+}
+
 header {
   padding:10px 0;
   
@@ -40,6 +44,20 @@ aside {
   ul {
     li {
       list-style-type: none;
+
+      &.expanded {
+
+        > ul {
+          display: block;
+        }
+
+        > a {
+          background-color: $blue;
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+
       a {
         display: block;
         padding:10px;
@@ -51,6 +69,25 @@ aside {
           text-decoration: none;
         }
 
+      }
+
+      ul {
+        display: none;
+
+        li {
+
+          a {
+            background-color: inherit;
+            padding:3px 30px;
+            margin:0;
+
+            &:hover,
+            &.active {
+              background-color: rgba(0,0,0, 0.05);
+              color: $blue;
+            }
+          }
+        }
       }
     }
   }

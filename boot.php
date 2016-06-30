@@ -8,9 +8,6 @@ defined('INC') or exit;
 // Path of root folder
 define('DIR_BASE', str_replace('\\', '/', dirname(__FILE__)) . '/');
 
-// Redefine all require constants here
-define('CFG_AJAX_ROUTE', 'api');
-
 // Using Composer
 $autoloader_file = DIR_BASE . 'vendor/autoload.php';
 if (file_exists($autoloader_file)) {

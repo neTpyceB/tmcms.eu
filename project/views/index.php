@@ -20,125 +20,13 @@ class IndexView extends View
         ?>
            <div class="content col-sm-8">
                     <div class="row">
-                        <div class="col-md-4 col-sm-6">
-                            <h2>Administration</h2>
-                            <ul>
-                                <li>
-                                    <a href="#"><i class="glyphicon glyphicon-list-alt"></i>Reverse earth rotation</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="glyphicon glyphicon-book"></i>Make sun cooler</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="glyphicon glyphicon-book"></i>Make Trump disappear</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="glyphicon glyphicon-list-alt"></i>Multiple friends on facebook</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="glyphicon glyphicon-list-alt"></i>Increase brain memory</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <h2>Administration</h2>
-                            <ul>
-                                <li>
-                                    <a href="#"><i class="glyphicon glyphicon-list-alt"></i>Reverse earth rotation</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="glyphicon glyphicon-book"></i>Make sun cooler</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="glyphicon glyphicon-book"></i>Make Trump disappear</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="glyphicon glyphicon-list-alt"></i>Multiple friends on facebook</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="glyphicon glyphicon-list-alt"></i>Increase brain memory</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <h2>Administration</h2>
-                            <ul>
-                                <li>
-                                    <a href="#"><i class="glyphicon glyphicon-list-alt"></i>Reverse earth rotation</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="glyphicon glyphicon-book"></i>Make sun cooler</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="glyphicon glyphicon-book"></i>Make Trump disappear</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="glyphicon glyphicon-list-alt"></i>Multiple friends on facebook</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="glyphicon glyphicon-list-alt"></i>Increase brain memory</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <h2>Administration</h2>
-                            <ul>
-                                <li>
-                                    <a href="#"><i class="glyphicon glyphicon-list-alt"></i>Reverse earth rotation</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="glyphicon glyphicon-book"></i>Make sun cooler</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="glyphicon glyphicon-book"></i>Make Trump disappear</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="glyphicon glyphicon-list-alt"></i>Multiple friends on facebook</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="glyphicon glyphicon-list-alt"></i>Increase brain memory</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <h2>Administration</h2>
-                            <ul>
-                                <li>
-                                    <a href="#"><i class="glyphicon glyphicon-list-alt"></i>Reverse earth rotation</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="glyphicon glyphicon-book"></i>Make sun cooler</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="glyphicon glyphicon-book"></i>Make Trump disappear</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="glyphicon glyphicon-list-alt"></i>Multiple friends on facebook</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="glyphicon glyphicon-list-alt"></i>Increase brain memory</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <h2>Administration</h2>
-                            <ul>
-                                <li>
-                                    <a href="#"><i class="glyphicon glyphicon-list-alt"></i>Reverse earth rotation</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="glyphicon glyphicon-book"></i>Make sun cooler</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="glyphicon glyphicon-book"></i>Make Trump disappear</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="glyphicon glyphicon-list-alt"></i>Multiple friends on facebook</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="glyphicon glyphicon-list-alt"></i>Increase brain memory</a>
-                                </li>
-                            </ul>
+                        <div class="col-sm-12">
+                            <div class="js-error-message error-message">
+                                Something wrong...
+                            </div>
+                            <div class="js-put-wiki-content">
+
+                            </div>
                         </div>
                     </div>
             </div>

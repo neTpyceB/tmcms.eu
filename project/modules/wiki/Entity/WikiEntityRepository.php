@@ -4,6 +4,16 @@ namespace TMCms\Modules\Wiki\Entity;
 
 use TMCms\Orm\EntityRepository;
 
+/**
+ * Class WikiEntityRepository
+ * @package TMCms\Modules\Wiki\Entity
+ *
+ * @method setWhereActive(bool $active)
+ * @method setWhereCategoryId(bool $category_id)
+ *
+ *
+ */
+
 class WikiEntityRepository extends EntityRepository
 {
     protected $db_table = 'm_wiki';

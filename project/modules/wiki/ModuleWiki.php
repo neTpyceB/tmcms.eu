@@ -21,23 +21,35 @@ class ModuleWiki implements IModule
         // Get categories
         $categories = new WikiCategoryEntityRepository();
         $categories->setWhereActive(true);
-        $all_categories = $categories->getPairs('title','id');
-
-        // Get wiki
-        $all_wiki = WikiEntityRepository::findAllEntitiesByCriteria(['active' => true]);
+        $categories->addOrderByField();
+        $all_categories = $categories->getAsArrayOfObjects();
 
         ob_start();
         ?>
         <ul>
-            <li>
-                <a href="#">Getting started</a>
-            </li>
-            <li>
-                <a href="#">Administration</a>
-            </li>
-            <li>
-                <a href="#">Admin panel</a>
-            </li>
+            <?php foreach($all_categories as $key => $category):
+                $category_id = $category->getId();
+                // Get wiki by category
+                $wiki = new WikiEntityRepository();
+                $wiki->setWhereCategoryId($category_id);
+                $wiki->setWhereActive(true);
+                $wiki->addOrderByField();
+                $all_wiki = $wiki->getAsArrayOfObjects();
+                if (count($all_wiki)): ?>
+                    <li class="js-expand-child <?= (!$key ? 'expanded' : ''); ?>">
+                        <a href="#"><?= $category->getTitle(); ?></a>
+                        <ul>
+                            <?php foreach ($all_wiki as $k => $wiki): $k++; ?>
+                                <li>
+                                    <a class="js-get-wiki-content" href="?wiki=<?= $wiki->getId(); ?>">
+                                        <?= $k . '. ' . $wiki->getTitle(); ?>
+                                    </a>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </li>
+                <?php endif; ?>
+            <?php endforeach; ?>
         </ul>
         <?php
         return ob_get_clean();
