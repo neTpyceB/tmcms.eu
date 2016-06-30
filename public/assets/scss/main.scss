@@ -129,6 +129,11 @@ footer {
         padding:3px 0;
         font-size:15px;
 
+        &.active {
+          text-decoration: underline;
+          color: #fff;
+        }
+
         i {
           display: inline-block;
           margin-right:5px;
