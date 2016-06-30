@@ -32,92 +32,9 @@ class CommonView extends View
         <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-4">
-                        <h3>Recently Added</h3>
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <i class="glyphicon glyphicon-list-alt"></i>
-                                    Something wrong
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="glyphicon glyphicon-book"></i>
-                                    Disabled Comments
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="glyphicon glyphicon-book"></i>
-                                    Theme Set Up
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="glyphicon glyphicon-list-alt"></i>
-                                    Follow Up Emails
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-4">
-                        <h3>Recently Updated</h3>
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <i class="glyphicon glyphicon-list-alt"></i>
-                                    Something wrong
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="glyphicon glyphicon-book"></i>
-                                    Disabled Comments
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="glyphicon glyphicon-book"></i>
-                                    Theme Set Up
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="glyphicon glyphicon-list-alt"></i>
-                                    Follow Up Emails
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-4">
-                        <h3>Popular</h3>
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <i class="glyphicon glyphicon-list-alt"></i>
-                                    Something wrong
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="glyphicon glyphicon-book"></i>
-                                    Disabled Comments
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="glyphicon glyphicon-book"></i>
-                                    Theme Set Up
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="glyphicon glyphicon-list-alt"></i>
-                                    Follow Up Emails
-                                </a>
-                            </li>
-                        </ul>
+                    <div class="col-sm-12">
+                        <h3><?= w('recently_added'); ?></h3>
+                        <?= $this->recently_added; ?>
                     </div>
                 </div>
             </div>

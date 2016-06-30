@@ -1,6 +1,7 @@
 <?php
 
 use TMCms\Admin\Users;
+use TMCms\Modules\Wiki\ModuleWiki;
 use TMCms\Routing\Controller;
 use TMCms\Templates\PageHead;
 use TMCms\Templates\PageTail;
@@ -29,5 +30,12 @@ class CommonController extends Controller
         ;
 
     }
-    public function footer() {}
+    public function footer() {
+
+        $last_added = ModuleWiki::getLastAddedInFooter(5);
+
+        return [
+            'recently_added' => $last_added
+        ];
+    }
 }

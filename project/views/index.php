@@ -22,10 +22,10 @@ class IndexView extends View
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="js-error-message error-message">
-                                Something wrong...
+                                <?= w('something_wrong'); ?>
                             </div>
                             <div class="js-put-wiki-content">
-
+                                Welcome
                             </div>
                         </div>
                     </div>
