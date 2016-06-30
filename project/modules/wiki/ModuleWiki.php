@@ -76,4 +76,25 @@ class ModuleWiki implements IModule
         return ob_get_clean();
     }
 
+    public static function getLastUpdatedInFooter($limit) {
+
+        $wiki = new WikiEntityRepository();
+        $wiki->setWhereActive(true);
+        $wiki->addOrderByField('last_update', true);
+        $wiki->setLimit($limit);
+        $all_wiki = $wiki->getAsArrayOfObjects();
+        ob_start(); ?>
+        <ul>
+            <?php foreach($all_wiki as $wiki): ?>
+                <li>
+                    <a class="js-get-wiki-content" href="?wiki=<?= $wiki->getId(); ?>">
+                        <?= $wiki->getTitle(); ?>
+                    </a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+        <?php
+        return ob_get_clean();
+    }
+
 }

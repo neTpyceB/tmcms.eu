@@ -32,9 +32,13 @@ class CommonView extends View
         <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-sm-6">
                         <h3><?= w('recently_added'); ?></h3>
                         <?= $this->recently_added; ?>
+                    </div>
+                    <div class="col-sm-6">
+                        <h3><?= w('recently_updated'); ?></h3>
+                        <?= $this->recently_updated; ?>
                     </div>
                 </div>
             </div>

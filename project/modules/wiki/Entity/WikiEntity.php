@@ -18,4 +18,10 @@ class WikiEntity extends Entity
         return $this;
     }
 
+    protected function beforeSave()
+    {
+        $this->setLastUpdate(date('Y-m-d H:i:s',time()));
+        return $this;
+    }
+
 }

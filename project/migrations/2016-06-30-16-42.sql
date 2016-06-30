@@ -1,0 +1,1 @@
+ALTER TABLE `m_wiki` ADD `last_update` TIMESTAMP NOT NULL AFTER `created_at`;

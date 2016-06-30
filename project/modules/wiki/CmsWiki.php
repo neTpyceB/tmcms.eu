@@ -99,6 +99,7 @@ class CmsWiki
             ],
             'unset' => [
                 'created_at',
+                'last_update',
                 'active',
                 'order'
             ]

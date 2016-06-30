@@ -32,10 +32,13 @@ class CommonController extends Controller
     }
     public function footer() {
 
-        $last_added = ModuleWiki::getLastAddedInFooter(5);
+        $limit = 5;
+        $last_added = ModuleWiki::getLastAddedInFooter($limit);
+        $last_update = ModuleWiki::getLastUpdatedInFooter($limit);
 
         return [
-            'recently_added' => $last_added
+            'recently_added' => $last_added,
+            'recently_updated' => $last_update
         ];
     }
 }
