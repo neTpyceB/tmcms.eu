@@ -25,7 +25,6 @@ Menu::getInstance()
     ->addSubMenuItem('categories')
 ;
 
-
 class CmsWiki
 {
     /* Wiki */

@@ -1,5 +1,6 @@
 <?php
 
+use TMCms\Routing\Languages;
 use TMCms\Routing\Structure;
 use TMCms\Routing\View;
 use TMCms\Templates\PageHead;
@@ -24,8 +25,17 @@ class CommonView extends View
                     <div class="col-sm-6">
                         <h1>Knowledge Base <small>Find answers and be happy</small></h1>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
                         <input id="search_input" placeholder="Start typing for search..." class="form-control" type="text" name="search">
+                    </div>
+                    <div class="col-sm-2 languages">
+                        <ul>
+                            <?php foreach(Languages::getPairs() as $k => $v): ?>
+                                <li>
+                                    <a <?= $k == LNG ? ' class="active"' : '' ?> href="<?= Languages::getUrl($k) ?>" title="<?= $v ?>"><?= $v ?></a>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
                     </div>
                 </div>
             </div>

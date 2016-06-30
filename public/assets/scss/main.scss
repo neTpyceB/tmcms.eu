@@ -24,6 +24,23 @@ header {
     display: block;
   }
 
+  .languages {
+    padding-top:20px;
+    text-align: right;
+
+    li {
+      display: inline-block;
+
+      a {
+        color: #fff;
+
+        &.active {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
 }
 
 main {
@@ -32,6 +49,7 @@ main {
 }
 
 aside {
+
   h3 {
     font-weight:700;
     margin-top:40px;

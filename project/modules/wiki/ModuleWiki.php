@@ -61,6 +61,7 @@ class ModuleWiki implements IModule
             <?php endforeach; ?>
         </ul>
         <?php
+
         return ob_get_clean();
     }
 
