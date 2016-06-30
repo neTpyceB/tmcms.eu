@@ -7,25 +7,18 @@ defined('INC') or exit;
 class IndexView extends View
 {
 
+    public function sidebar() {
+        ?>
+        <aside class="col-sm-4">
+            <h3><?= w('Categories'); ?></h3>
+            <?= $this->side_categories; ?>
+        </aside>
+        <?php
+    }
     public function index()
     {
         ?>
-            <div class="row">
-                <aside class="col-sm-4">
-                    <h3>Categories</h3>
-                    <ul>
-                        <li>
-                            <a href="#">Getting started</a>
-                        </li>
-                        <li>
-                            <a href="#">Administration</a>
-                        </li>
-                        <li>
-                            <a href="#">Admin panel</a>
-                        </li>
-                    </ul>
-                </aside>
-                <div class="content col-sm-8">
+           <div class="content col-sm-8">
                     <div class="row">
                         <div class="col-md-4 col-sm-6">
                             <h2>Administration</h2>
@@ -148,7 +141,6 @@ class IndexView extends View
                             </ul>
                         </div>
                     </div>
-                </div>
             </div>
         <?php
     }
