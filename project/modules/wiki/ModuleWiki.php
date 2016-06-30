@@ -26,6 +26,7 @@ class ModuleWiki implements IModule
         // Get wiki
         $all_wiki = WikiEntityRepository::findAllEntitiesByCriteria(['active' => true]);
 
+        ob_start();
         ?>
         <ul>
             <li>
@@ -39,6 +40,7 @@ class ModuleWiki implements IModule
             </li>
         </ul>
         <?php
+        return ob_get_clean();
     }
 
 }
