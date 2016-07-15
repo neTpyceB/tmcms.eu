@@ -170,5 +170,18 @@ footer {
       padding:20px;
     }
 
+    ul {
+      margin:10px 0;
+      li {
+        &:not(:last-child) {
+          padding-right:80px;
+        }
+
+        a {
+          display: inline-block;
+        }
+      }
+    }
+
   }
 }

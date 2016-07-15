@@ -63,9 +63,20 @@ class CommonView extends View
             <div class="container-fluid">
                 <div class="row bottom">
                     <div class="col-sm-12">
-                        <p>
-                            Copyright 2016.
-                        </p>
+                        <ul class="list-inline">
+                            <li>
+                                Copyright &copy; <a href="http://devp.eu" target="_blank">DEVP</a> 2016.
+                            </li>
+                            <li>
+                                Contacts us: <a href="mailto:info@devp.eu">info@devp.eu</a>
+                            </li>
+                            <li>
+                                Checkout our homepage: <a href="http://devp.eu" target="_blank">www.devp.eu</a>
+                            </li>
+                            <li>
+                                Call us: <a href="tel:+37129662045" title="Better write us">+371 29662045</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
