@@ -15,7 +15,10 @@ class IndexController extends Controller
     public static function getComponents()
     {
         return [
-            'welcome_text'
+            'welcome_text' => [
+                'type' => 'textarea',
+                'edit' => 'wysiwyg',
+            ],
         ];
     }
 
