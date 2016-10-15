@@ -12,6 +12,13 @@ defined('INC') or exit;
 
 class IndexController extends Controller
 {
+    public static function getComponents()
+    {
+        return [
+            'welcome_text'
+        ];
+    }
+
     public function index()
     {
 
