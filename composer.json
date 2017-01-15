@@ -1,8 +1,8 @@
 {
   "license": "proprietary",
-  "description": "Empty project with prepared simple layout, based on the The Modern CMS",
+  "description": "Wiki for TMCMS",
   "keywords": ["cms"],
-  "homepage": "http://devp.eu/",
+  "homepage": "http://tmcms.eu/",
   "authors": [
     {
       "name": "Vadims Petrusevs",
@@ -13,32 +13,24 @@
   ],
   "autoload": {
     "psr-0": {
-      "neTpyceB\\Tests": "tests"
+      "devp-eu\\Tests": "tests"
     }
   },
   "repositories": [
     {
       "type": "vcs",
-      "url": "git@bitbucket.org:sia-devp/tmcms.git"
+      "url": "git@github.com:devp-eu/tmcms.git"
     },
     {
       "type": "vcs",
-      "url": "git@github.com:neTpyceB/tmcms-core.git"
-    },
-    {
-      "type": "vcs",
-      "url": "git@github.com:neTpyceB/tmcms-panel.git"
-    },
-    {
-      "type": "vcs",
-      "url": "git@bitbucket.org:sia-devp/tmcms-admin.git"
+      "url": "git@github.com:devp-eu/tmcms-admin.git"
     }
   ],
   "require": {
     "php": ">=5.5",
-    "neTpyceB/TMCms": "dev-master",
-    "neTpyceB/TMCms-core": "dev-master",
-    "neTpyceB/TMCms-panel": "dev-master",
-    "neTpyceB/TMCms-admin": "dev-master"
+    "devp-eu/TMCms": "dev-master",
+    "devp-eu/TMCms-core": "dev-master",
+    "devp-eu/TMCms-panel": "dev-master",
+    "devp-eu/TMCms-admin": "dev-master"
   }
 }
