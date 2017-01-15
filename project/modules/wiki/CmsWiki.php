@@ -2,14 +2,12 @@
 
 namespace TMCms\Modules\Wiki;
 
-use TMCms\Admin\Menu;
 use TMCms\Admin\Messages;
 use TMCms\DB\SQL;
 use TMCms\HTML\BreadCrumbs;
 use TMCms\HTML\Cms\CmsFormHelper;
 use TMCms\HTML\Cms\CmsTable;
 use TMCms\HTML\Cms\Column\ColumnActive;
-use TMCms\HTML\Cms\Column\ColumnCheckbox;
 use TMCms\HTML\Cms\Column\ColumnData;
 use TMCms\HTML\Cms\Column\ColumnDelete;
 use TMCms\HTML\Cms\Column\ColumnEdit;
@@ -21,10 +19,6 @@ use TMCms\Modules\Wiki\Entity\WikiCategoryEntityRepository;
 use TMCms\Modules\Wiki\Entity\WikiEntity;
 use TMCms\Modules\Wiki\Entity\WikiEntityRepository;
 
-Menu::getInstance()
-    ->addSubMenuItem('categories')
-;
-
 class CmsWiki
 {
     /* Wiki */
@@ -34,7 +28,7 @@ class CmsWiki
         $wiki = new WikiEntityRepository();
         $wiki->addOrderByField('order');
 
-        echo BreadCrumbs::getInstance()
+        BreadCrumbs::getInstance()
             ->addCrumb(__('Wiki'), '?p=' . P)
             ->addCrumb(__('All Wiki'))
         ;
@@ -107,7 +101,7 @@ class CmsWiki
 
     public function add()
     {
-        echo BreadCrumbs::getInstance()
+        BreadCrumbs::getInstance()
             ->addCrumb(__('Wiki'), '?p=' . P)
             ->addCrumb(__('All Wiki'), '?p=' . P)
             ->addCrumb(__('Add Wiki'))
@@ -132,7 +126,7 @@ class CmsWiki
     {
         $wiki = new WikiEntity($_GET['id']);
 
-        echo BreadCrumbs::getInstance()
+        BreadCrumbs::getInstance()
             ->addCrumb(__('Wiki'), '?p=' . P)
             ->addCrumb(__('All Wiki'), '?p=' . P)
             ->addCrumb($wiki->getTitle())
@@ -208,7 +202,7 @@ class CmsWiki
         $categories = new WikiCategoryEntityRepository();
         $categories->addOrderByField('order');
 
-        echo BreadCrumbs::getInstance()
+        BreadCrumbs::getInstance()
             ->addCrumb(__('Wiki'), '?p=' . P)
             ->addCrumb(__('Categories'), '?p=' . P . '&do=categories')
             ->addCrumb(__('All Categories'))
@@ -263,7 +257,7 @@ class CmsWiki
 
     public function categories_add()
     {
-        echo BreadCrumbs::getInstance()
+        BreadCrumbs::getInstance()
             ->addCrumb(__('Wiki'), '?p=' . P)
             ->addCrumb(__('Categories'), '?p=' . P . '&do=categories')
             ->addCrumb(__('Add Category'))
@@ -289,7 +283,7 @@ class CmsWiki
     {
         $category = new WikiCategoryEntity($_GET['id']);
 
-        echo BreadCrumbs::getInstance()
+        BreadCrumbs::getInstance()
             ->addCrumb(__('Wiki'), '?p=' . P)
             ->addCrumb(__('Categories'), '?p=' . P . '&do=categories')
             ->addCrumb($category->getName())
