@@ -97,6 +97,7 @@ class CmsWiki
                 'text' => [
                     'translation' => true,
                     'type' => 'textarea',
+                    'rows' => 25,
                     'edit' => 'wysiwyg'
                 ],
             ],
