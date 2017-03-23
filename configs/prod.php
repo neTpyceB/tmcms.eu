@@ -13,7 +13,8 @@ $config_prod = [
     ],
     'cms' => [
         'unique_key' => 'registered_key', // Required for updates
-        'logo' => '/vendor/neTpyceB/TMCms/src/assets/images/logo.png', // Logo in admin panel
+        'logo' => '/vendor/devp-eu/tmcms-core/src/assets/images/logo.png', // Logo in admin panel
+        'favicon' => DIR_CMS_IMAGES_URL . 'logo_square.png', // Favicon in admin panel
         'logo_link' => 'http://devp.eu/', // Link on logo in admin panel
     ],
     'http_auth' => [
@@ -28,4 +29,4 @@ if (file_exists(__DIR__ . '/local.php')) {
     $config_local = include_once __DIR__ . '/local.php';
 }
 
-return array_merge($config_prod, $config_local);
+return array_replace_recursive($config_prod, $config_local);

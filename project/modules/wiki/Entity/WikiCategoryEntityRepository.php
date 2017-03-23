@@ -8,8 +8,7 @@ use TMCms\Orm\EntityRepository;
  * Class WikiCategoryEntityRepository
  * @package TMCms\Modules\Wiki\Entity
  *
- * @method setWhereActive(bool $active)
- *
+ * @method $this setWhereActive(bool $active)
  */
 
 class WikiCategoryEntityRepository extends EntityRepository

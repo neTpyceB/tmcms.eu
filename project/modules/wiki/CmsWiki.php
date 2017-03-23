@@ -66,6 +66,16 @@ class CmsWiki
         ;
     }
 
+    public function add()
+    {
+        BreadCrumbs::getInstance()
+            ->addCrumb(__('Wiki'), '?p=' . P)
+            ->addCrumb(__('All Wiki'), '?p=' . P)
+            ->addCrumb(__('Add Wiki'));
+
+        echo $this->_add_edit_form();
+    }
+
     public function _add_edit_form($data = null)
     {
         $wiki = new WikiEntityRepository();
@@ -87,7 +97,7 @@ class CmsWiki
                 'text' => [
                     'translation' => true,
                     'type' => 'textarea',
-                    'edit' => 'tinymce'
+                    'edit' => 'wysiwyg'
                 ],
             ],
             'unset' => [
@@ -97,17 +107,6 @@ class CmsWiki
                 'order'
             ]
         ]);
-    }
-
-    public function add()
-    {
-        BreadCrumbs::getInstance()
-            ->addCrumb(__('Wiki'), '?p=' . P)
-            ->addCrumb(__('All Wiki'), '?p=' . P)
-            ->addCrumb(__('Add Wiki'))
-        ;
-
-        echo $this->_add_edit_form();
     }
 
     public function _add()
@@ -234,6 +233,16 @@ class CmsWiki
         ;
     }
 
+    public function categories_add()
+    {
+        BreadCrumbs::getInstance()
+            ->addCrumb(__('Wiki'), '?p=' . P)
+            ->addCrumb(__('Categories'), '?p=' . P . '&do=categories')
+            ->addCrumb(__('Add Category'));
+
+        echo $this->_categories_add_edit_form();
+    }
+
     public function _categories_add_edit_form($data = null)
     {
         $categories = new WikiCategoryEntityRepository();
@@ -255,17 +264,6 @@ class CmsWiki
         ]);
     }
 
-    public function categories_add()
-    {
-        BreadCrumbs::getInstance()
-            ->addCrumb(__('Wiki'), '?p=' . P)
-            ->addCrumb(__('Categories'), '?p=' . P . '&do=categories')
-            ->addCrumb(__('Add Category'))
-        ;
-
-        echo $this->_categories_add_edit_form();
-    }
-
     public function _categories_add()
     {
 
@@ -274,7 +272,7 @@ class CmsWiki
         $category->save();
 
         Messages::sendGreenAlert('Category was created');
-        App::add('Category "' . $category->getName() . '" was created');
+        App::add('Category "' . $category->getTitle() . '" was created');
 
         go('?p=' . P . '&do=categories&highlight=' . $category->getId());
     }
@@ -286,7 +284,7 @@ class CmsWiki
         BreadCrumbs::getInstance()
             ->addCrumb(__('Wiki'), '?p=' . P)
             ->addCrumb(__('Categories'), '?p=' . P . '&do=categories')
-            ->addCrumb($category->getName())
+            ->addCrumb($category->getTitle())
             ->addCrumb(__('Edit'))
         ;
 
@@ -303,7 +301,7 @@ class CmsWiki
         $category->save();
 
         Messages::sendGreenAlert('Category was updated');
-        App::add('Category "' . $category->getName() . '" was updated');
+        App::add('Category "' . $category->getTitle() . '" was updated');
 
         go('?p=' . P . '&do=categories&highlight=' . $category->getId());
     }
@@ -314,7 +312,7 @@ class CmsWiki
         $category->deleteObject();
 
         Messages::sendGreenAlert('Category was deleted');
-        App::add('Category "' . $category->getName() . '" was deleted');
+        App::add('Category "' . $category->getTitle() . '" was deleted');
 
         if (IS_AJAX_REQUEST) {
             die('1');
@@ -351,5 +349,4 @@ class CmsWiki
             back();
         }
     }
-
 }

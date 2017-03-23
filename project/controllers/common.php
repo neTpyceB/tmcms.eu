@@ -1,6 +1,5 @@
 <?php
 
-use TMCms\Admin\Users;
 use TMCms\Modules\Wiki\ModuleWiki;
 use TMCms\Routing\Controller;
 use TMCms\Templates\PageHead;
