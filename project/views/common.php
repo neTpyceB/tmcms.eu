@@ -1,9 +1,7 @@
 <?php
 
 use TMCms\Routing\Languages;
-use TMCms\Routing\Structure;
 use TMCms\Routing\View;
-use TMCms\Templates\PageHead;
 
 defined('INC') or exit;
 
@@ -65,13 +63,10 @@ class CommonView extends View
                     <div class="col-sm-12">
                         <ul class="list-inline">
                             <li>
-                                Copyright &copy; <a href="http://devp.eu" target="_blank">DEVP</a> 2016.
-                            </li>
-                            <li>
                                 Contacts us: <a href="mailto:info@devp.eu">info@devp.eu</a>
                             </li>
                             <li>
-                                Checkout our homepage: <a href="http://devp.eu" target="_blank">www.devp.eu</a>
+                                Checkout our homepage: <a href="http://devp.eu" target="_blank">http://devp.eu/</a>
                             </li>
                             <li>
                                 Call us: <a href="tel:+37129662045" title="Better write us">+371 29662045</a>
