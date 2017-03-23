@@ -19,7 +19,7 @@ $(document).ready(function() {
 
         $.ajax({
         	dataType: 'json',
-        	url: '/-/ajax/wiki/',
+            url: '/-/api/wiki/',
         	data: data,
         	method: 'post',
         	success: function(response) {
