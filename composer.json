@@ -1,6 +1,6 @@
 {
   "license": "proprietary",
-  "description": "Wiki for TMCMS",
+  "description": "Wiki website for TMCms",
   "keywords": ["cms"],
   "homepage": "http://tmcms.eu/",
   "authors": [
@@ -28,9 +28,9 @@
   ],
   "require": {
     "php": ">=5.5",
-    "devp-eu/TMCms": "dev-master",
-    "devp-eu/TMCms-core": "dev-master",
-    "devp-eu/TMCms-panel": "dev-master",
-    "devp-eu/TMCms-admin": "dev-master"
+    "devp-eu/tmcms": "dev-master",
+    "devp-eu/tmcms-core": "dev-master",
+    "devp-eu/tmcms-panel": "dev-master",
+    "devp-eu/tmcms-admin": "dev-master"
   }
 }
