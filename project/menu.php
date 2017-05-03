@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'wiki' => [
+    'wiki'     => [
         'title' => 'Wiki',
         'items' => [
             '_default' => [
@@ -12,4 +12,19 @@ return [
             ],
         ],
     ],
+    'log'      => [
+        'title' => 'Usage',
+        'items' => [
+            '_default' => [
+                'title' => 'Domains',
+            ],
+            'usages'   => [
+                'title' => 'Usages',
+            ],
+            'settings' => [
+                'title' => 'Settings',
+            ],
+        ],
+    ],
+    'settings' => [],
 ];
