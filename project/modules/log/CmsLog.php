@@ -4,7 +4,7 @@ namespace TMCms\Modules\Log;
 
 use TMCms\HTML\BreadCrumbs;
 use TMCms\HTML\Cms\CmsTableHelper;
-use TMCms\Log\Entity\AppLogEntityRepository;
+use TMCms\Modules\Log\Entity\AppLogEntityRepository;
 use TMCms\Modules\Log\Entity\UsageEntity;
 use TMCms\Modules\Log\Entity\UsageEntityRepository;
 use TMCms\Modules\Log\Entity\UsageWebsiteEntity;
