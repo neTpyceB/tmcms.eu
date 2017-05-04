@@ -1,9 +1,14 @@
 <?php
 
+use TMCms\Modules\Log\Entity\UsageEntityRepository;
+use TMCms\Modules\Log\Entity\UsageWebsiteEntityRepository;
+use TMCms\Modules\ModuleManager;
 use TMCms\Modules\Wiki\ModuleWiki;
 use TMCms\Routing\Controller;
 use TMCms\Templates\PageHead;
 use TMCms\Templates\PageTail;
+
+ModuleManager::requireModule('log');
 
 defined('INC') or exit;
 
@@ -35,9 +40,16 @@ class CommonController extends Controller
         $last_added = ModuleWiki::getLastAddedInFooter($limit);
         $last_update = ModuleWiki::getLastUpdatedInFooter($limit);
 
+        $public_websites_count = new UsageWebsiteEntityRepository();
+
+        $usage = new UsageEntityRepository();
+        $requests_served_count = $usage->getSumOfOneField('counter');
+
         return [
-            'recently_added' => $last_added,
-            'recently_updated' => $last_update
+            'recently_added'        => $last_added,
+            'recently_updated'      => $last_update,
+            'public_websites_count' => $public_websites_count->getCountOfObjectsInCollection(),
+            'requests_served_count' => $requests_served_count,
         ];
     }
 }

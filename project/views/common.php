@@ -60,16 +60,26 @@ class CommonView extends View
             </div>
             <div class="container-fluid">
                 <div class="row bottom">
-                    <div class="col-sm-12">
+                    <div class="col-sm-8">
                         <ul class="list-inline">
                             <li>
                                 Contacts us: <a href="mailto:info@devp.eu">info@devp.eu</a>
                             </li>
                             <li>
-                                Checkout our homepage: <a href="http://devp.eu" target="_blank">http://devp.eu/</a>
+                                Check our homepage: <a href="http://devp.eu/" target="_blank">http://devp.eu/</a>
                             </li>
                             <li>
                                 Call us: <a href="tel:+37129662045" title="Better write us">+371 29662045</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <ul class="list-inline">
+                            <li title="Website amount that share usage statistics with main server">
+                                Public websites: <?= $this->public_websites_count ?>
+                            </li>
+                            <li title="Total amount of successful requests served by all public websites">
+                                Requests served: <?= $this->requests_served_count ?>
                             </li>
                         </ul>
                     </div>

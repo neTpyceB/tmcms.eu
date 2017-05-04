@@ -21,19 +21,22 @@ class WikiEntityRepository extends EntityRepository
             'category_id' => [
                 'type' => 'index'
             ],
-            'title' => [
+            'title'       => [
                 'type' => 'translation'
             ],
-            'text' => [
+            'text'        => [
                 'type' => 'translation'
             ],
-            'order' => [
+            'order'       => [
                 'type' => 'int'
             ],
-            'created_at' => [
+            'created_at'  => [
                 'type' => 'current_timestamp'
             ],
-            'active' => [
+            'last_update' => [
+                'type' => 'ts',
+            ],
+            'active'      => [
                 'type' => 'bool'
             ]
         ]
