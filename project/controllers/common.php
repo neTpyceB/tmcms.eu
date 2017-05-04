@@ -51,7 +51,7 @@ class CommonController extends Controller
         }
 
         $usage = new UsageEntityRepository();
-        $requests_served_count = $usage->getSumOfOneField('counter');
+        $requests_served_count = q_value('SELECT SUM(`counter`) AS `counter` FROM `' . $usage->getDbTableName() . '`');
 
         return [
             'recently_added'        => $last_added,
