@@ -60,7 +60,7 @@ class CommonView extends View
             </div>
             <div class="container-fluid">
                 <div class="row bottom">
-                    <div class="col-sm-8">
+                    <div class="col-sm-6">
                         <ul class="list-inline">
                             <li>
                                 Contacts us: <a href="mailto:info@devp.eu">info@devp.eu</a>
@@ -73,10 +73,13 @@ class CommonView extends View
                             </li>
                         </ul>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-6">
                         <ul class="list-inline">
+                            <li>
+                                Stats updated: <?= date(CFG_CMS_DATETIME_FORMAT, $this->last_stats_ts) ?>
+                            </li>
                             <li title="Website amount that share usage statistics with main server.">
-                                Public websites: <?= $this->public_websites_count ?> [<?= date(CFG_CMS_DATETIME_FORMAT, $this->last_stats_ts) ?>]
+                                Public websites: <?= $this->public_websites_count ?>
                             </li>
                             <li title="Total amount of successful requests served by all public websites">
                                 Requests served: <?= number_format($this->requests_served_count, 0, '.', ' ') ?>
