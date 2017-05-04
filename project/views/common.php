@@ -75,8 +75,8 @@ class CommonView extends View
                     </div>
                     <div class="col-sm-4">
                         <ul class="list-inline">
-                            <li title="Website amount that share usage statistics with main server">
-                                Public websites: <?= $this->public_websites_count ?>
+                            <li title="Website amount that share usage statistics with main server. Less than 10% of total websites share stats.">
+                                Public websites: <?= $this->public_websites_count ?> [<?= date(CFG_CMS_DATETIME_FORMAT, $this->last_stats_ts) ?>]
                             </li>
                             <li title="Total amount of successful requests served by all public websites">
                                 Requests served: <?= $this->requests_served_count ?>

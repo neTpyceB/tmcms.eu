@@ -1,6 +1,7 @@
 <?php
 
 use TMCms\Modules\Log\Entity\UsageEntityRepository;
+use TMCms\Modules\Log\Entity\UsageWebsiteEntity;
 use TMCms\Modules\Log\Entity\UsageWebsiteEntityRepository;
 use TMCms\Modules\ModuleManager;
 use TMCms\Modules\Wiki\ModuleWiki;
@@ -41,6 +42,13 @@ class CommonController extends Controller
         $last_update = ModuleWiki::getLastUpdatedInFooter($limit);
 
         $public_websites_count = new UsageWebsiteEntityRepository();
+        $public_websites_count->addOrderByField('last_update', true);
+
+        $last_update_website = NOW;
+        /** @var UsageWebsiteEntity $latest_website */
+        if ($latest_website = $public_websites_count->getFirstObjectFromCollection()) {
+            $last_update_website = $latest_website->getLastUpdate();
+        }
 
         $usage = new UsageEntityRepository();
         $requests_served_count = $usage->getSumOfOneField('counter');
@@ -48,6 +56,7 @@ class CommonController extends Controller
         return [
             'recently_added'        => $last_added,
             'recently_updated'      => $last_update,
+            'last_stats_ts'         => $last_update_website,
             'public_websites_count' => $public_websites_count->getCountOfObjectsInCollection(),
             'requests_served_count' => $requests_served_count,
         ];
