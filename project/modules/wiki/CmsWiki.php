@@ -26,6 +26,7 @@ class CmsWiki
     public function _default()
     {
         $wiki = new WikiEntityRepository();
+        $wiki->addOrderByField('category_id');
         $wiki->addOrderByField('order');
 
         BreadCrumbs::getInstance()
