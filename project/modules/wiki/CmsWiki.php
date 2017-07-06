@@ -40,6 +40,7 @@ class CmsWiki
 
         echo CmsTable::getInstance()
             ->addData($wiki)
+            ->setPerPage(250)
             ->addColumn(ColumnData::getInstance('id')
                 ->setTitle('Wiki #')
                 ->enableNarrowWidth()
